@@ -186,7 +186,7 @@ namespace MSA {
 		void AppWindow::setWindowShape(int requestedWidth, int requestedHeight) {
 			NSRect windowFrame  = [glWindow() frame];
 			NSRect viewFrame = [glView() frame];
-			NSLog(@"AppWindow::setWindowShape requested:(%i %i) window:%@ view:%@", requestedWidth, requestedHeight, NSStringFromRect(windowFrame), NSStringFromRect(viewFrame));
+			//NSLog(@"AppWindow::setWindowShape requested:(%i %i) window:%@ view:%@", requestedWidth, requestedHeight, NSStringFromRect(windowFrame), NSStringFromRect(viewFrame));
 			
 			windowFrame.origin.y -= requestedHeight -  viewFrame.size.height;
 			windowFrame.size = NSMakeSize(requestedWidth + windowFrame.size.width - viewFrame.size.width, requestedHeight + windowFrame.size.height - viewFrame.size.height);

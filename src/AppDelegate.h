@@ -39,15 +39,20 @@
 
 #import "GLWindow.h"
 #import "GLView.h"
+#import "MyUIDelegate.h"
 
 @interface AppDelegate : NSObject {
 	IBOutlet GLWindow			*_glWindow;	// points to current window
 	IBOutlet GLView				*_glView;
+    IBOutlet MyUIDelegate       *_guiDeligate;
+
 }
 
 
-@property (readonly) GLWindow	*_glWindow;
-@property (readonly) GLView		*_glView;
+@property (readonly) GLWindow               *_glWindow;
+@property (readonly) GLView                 *_glView;
+@property (readwrite, assign) MyUIDelegate	*_guiDeligate;
+
 
 +(AppDelegate*)instance;
 

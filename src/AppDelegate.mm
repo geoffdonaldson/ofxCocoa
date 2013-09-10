@@ -46,6 +46,7 @@ using namespace ofxCocoa;
 
 @synthesize _glWindow;
 @synthesize _glView;
+@synthesize _guiDeligate;
 
 static AppDelegate* _appDelegate = NULL;
 
